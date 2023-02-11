@@ -3,7 +3,7 @@ import { Polygon } from "@react-google-maps/api";
 export default function RussianBorder() {
     const russianBorderCoords = [];
     // This gets coordinate data from local json file, necessary so we can draw a russian territory
-    const russianData = require('./map-data/russia_prod.json');
+    const russianData = require('./map-data/russia_border.json');
 
     // Here we need to grab each coordinate and add it to russianBorderCoords,
     // so we can give google maps api a clean data array populated with russian controlled coordinates

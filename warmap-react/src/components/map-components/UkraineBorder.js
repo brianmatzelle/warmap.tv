@@ -3,7 +3,7 @@ import { Polyline } from "@react-google-maps/api";
 export default function UkraineBorder() {
     const ukraineBorderCoords = [];
     // This gets coordinate data from local json file, necessary so we can draw a russian territory
-    const ukraineData = require('./map-data/gadm41_UKR_0.json');
+    const ukraineData = require('./map-data/ukraine_0.json');
 
     // Here we need to grab each coordinate and add it to russianBorderCoords,
     // so we can give google maps api a clean data array populated with russian controlled coordinates
