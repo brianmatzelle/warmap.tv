@@ -6,6 +6,12 @@ export default function Markers() {
         scaledSize: new window.google.maps.Size(112, 75),
     }
 
+    // const locationList = [];
+    // const markerFile = require('./map-data/markerData.json');
+    // markerFile.forEach((marker) => {
+    //     locationList.push(marker);
+    // });
+
     return (
         <Marker 
             position={{lat: 48.7, lng: 35}}

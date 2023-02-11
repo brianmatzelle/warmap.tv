@@ -3,6 +3,7 @@ import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 import RussianBorder from './map-components/RussianBorder';
 import Markers from './map-components/Markers';
 import './Map.css';
+import UkraineBorder from './map-components/UkraineBorder';
 
 const containerStyle = {
   width: "100%",
@@ -35,6 +36,7 @@ export default function Map() {
         zoom={6.7}
       >
         { /* Child components, such as markers, info windows, etc. */ }
+        <UkraineBorder />
         <RussianBorder />
         <Markers />
       </GoogleMap>
