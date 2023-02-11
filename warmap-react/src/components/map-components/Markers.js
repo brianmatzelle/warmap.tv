@@ -7,9 +7,14 @@ export default function Markers() {
     }
 
     // const locationList = [];
-    // const markerFile = require('./map-data/markerData.json');
-    // markerFile.forEach((marker) => {
-    //     locationList.push(marker);
+    // const markerFile = require('./map-data/marker_data.json');
+    // markerFile[0].forEach((marker) => {
+    //     marker.forEach((info) => {
+    //         locationList.push({
+    //             lat: info.latlng.lat,
+    //             lng: info.latlng.lng,
+    //         });
+    //     })
     // });
 
     return (
