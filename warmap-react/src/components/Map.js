@@ -1,6 +1,7 @@
 import React from 'react'
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 import RussianBorder from './map-components/RussianBorder';
+import Markers from './map-components/Markers';
 import './Map.css';
 
 const containerStyle = {
@@ -35,6 +36,7 @@ export default function Map() {
       >
         { /* Child components, such as markers, info windows, etc. */ }
         <RussianBorder />
+        <Markers />
       </GoogleMap>
   ) : <></>
 }
