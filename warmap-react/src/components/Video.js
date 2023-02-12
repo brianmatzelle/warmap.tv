@@ -4,10 +4,17 @@ export function createVideo() {
     console.log("Video created");
 }
 
-export default function Video() {
+export default function Video({ data }) {
     return (
-        <div>
-            <h1>Video</h1>
-        </div>
+        <iframe 
+            width={data.width} 
+            height={data.height} 
+            src={data.src} 
+            title={data.title} 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen
+            >
+        </iframe>
     );
 }
