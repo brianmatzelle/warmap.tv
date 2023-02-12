@@ -19,10 +19,7 @@ const center = {
 const mapId = process.env.REACT_APP_MAPS_ID;
 const apiKey = process.env.REACT_APP_MAPS_API_KEY;
 
-console.log(mapId);
-console.log(apiKey);
-
-export default function Map() {
+export default function Map({ handleToggle }) {
   const { isLoaded } = useJsApiLoader({
     id: mapId,
     googleMapsApiKey: apiKey,
@@ -38,7 +35,7 @@ export default function Map() {
         { /* Child components, such as markers, info windows, etc. */ }
         <UkraineBorder />
         <RussianBorder />
-        <Markers />
+        <Markers handleToggle={handleToggle} />
       </GoogleMap>
   ) : <></>
 }

@@ -2,7 +2,7 @@ import { Marker } from "@react-google-maps/api";
 import React from "react";
 import { createVideo } from "../Video";
 
-export default function Markers() {
+export default function Markers({ handleToggle }) {
     const helmetIcon = {
         url: require('./assets/helmet-green.png'),
         scaledSize: new window.google.maps.Size(112, 75),
@@ -23,7 +23,7 @@ export default function Markers() {
         <Marker 
             position={{lat: 48.7, lng: 35}}
             icon={helmetIcon}
-            onClick={() => createVideo()}
+            onClick={() => handleToggle()}
         />
     );
 }
