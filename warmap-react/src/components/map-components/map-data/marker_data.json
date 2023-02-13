@@ -1,36 +1,44 @@
-// {
-//     "locations": [
-//         "dnipro": 
-//         {
-//             "building": 
-//             {
-//                 "embed": "https://www.redditmedia.com/r/UkraineWarVideoReport/comments/10bq8ju/nsfw_scene_of_the_attack_in_dnipro_many_screams/?ref_source=embed&amp;ref=share&amp;embed=true",
-//                 "about": "https://en.wikipedia.org/wiki/2023_Dnipro_residential_building_airstrike",
-//                 "desc": "Wikipedia: Dnipro residential buidling airstrike",
-//                 "latlng": 
-//                 {
-//                     "lat": 48.419167,
-//                     "lng": 35.067778 
-//                 },
-//                 "width": "640",
-//                 "height": "635"
-//             }
-//         },
-//         "bakhmut":
-//         {
-//             "nuckingFutsMine": 
-//             {
-//                 "embed": "./videos/synchronized.mp4",
-//                 "about": "https://www.reddit.com/r/CombatFootage/comments/yqz3hv/nucking_futs_turret_pov_antitank_mine_blast/",
-//                 "desc": "Nucking Futs Turret POV, antitank mine blast, Ukraine.",
-//                 "latlng": 
-//                 { 
-//                     "lat": 48.5987, 
-//                     "lng": 37.9980 
-//                 },
-//                 "width": "853",
-//                 "height": "480"
-//             }
-//         }
-//     ],
-// }
+{
+    "locations": [
+        {
+            "dnipro": 
+            [
+                {
+                    "building": 
+                    {
+                        "src": "https://www.redditmedia.com/r/UkraineWarVideoReport/comments/10bq8ju/nsfw_scene_of_the_attack_in_dnipro_many_screams/?ref_source=embed&amp;ref=share&amp;embed=true",
+                        "about": "https://en.wikipedia.org/wiki/2023_Dnipro_residential_building_airstrike",
+                        "title": "Wikipedia: Dnipro residential buidling airstrike",
+                        "latlng":
+                        {
+                            "lat": 48.419167,
+                            "lng": 35.067778 
+                        },
+                        "width": "640",
+                        "height": "635"
+                    }
+                }
+            ]
+        },
+        {
+            "bakhmut":
+            [
+                {
+                    "nuckingFutsMine": 
+                    {
+                        "src": "./videos/synchronized.mp4",
+                        "about": "https://www.reddit.com/r/CombatFootage/comments/yqz3hv/nucking_futs_turret_pov_antitank_mine_blast/",
+                        "title": "Nucking Futs Turret POV, antitank mine blast, Ukraine.",
+                        "latlng": 
+                        { 
+                            "lat": 48.5987, 
+                            "lng": 37.9980 
+                        },
+                        "width": "853",
+                        "height": "480"
+                    }
+                }
+            ]
+        }
+    ]
+}

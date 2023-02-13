@@ -1,10 +1,11 @@
 import './App.css';
 import Map from './components/Map';
 import Video from './components/Video';
-import React from 'react'
+import React, { useState } from 'react'
 
 function App() {
-  const [toggle, setToggle] = React.useState(false)
+  const [toggle, setToggle] = useState(false);
+  const [videoData, setVideoData] = useState(null);
 
   const handleToggle = () => {
     setToggle(!toggle);
@@ -12,8 +13,8 @@ function App() {
 
   return (
     <div className="App">
-      <Map handleToggle={handleToggle} />
-      {toggle && <Video />}
+      <Map handleToggle={handleToggle} setVideoData={setVideoData}  />
+      {toggle && <Video data={videoData} />}
     </div>
   );
 }

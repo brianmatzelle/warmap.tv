@@ -1,29 +1,31 @@
 import { Marker } from "@react-google-maps/api";
 import React from "react";
-import { createVideo } from "../Video";
 
-export default function Markers({ handleToggle }) {
+export default function Markers({ handleToggle, setVideoData }) {
     const helmetIcon = {
         url: require('./assets/helmet-green.png'),
         scaledSize: new window.google.maps.Size(112, 75),
     }
 
-    // const locationList = [];
-    // const markerFile = require('./map-data/marker_data.json');
-    // markerFile[0].forEach((marker) => {
-    //     marker.forEach((info) => {
-    //         locationList.push({
-    //             lat: info.latlng.lat,
-    //             lng: info.latlng.lng,
-    //         });
-    //     })
-    // });
+    const markerData = require('./map-data/marker_data.json');
+    const locations = markerData.locations;
 
     return (
-        <Marker 
-            position={{lat: 48.7, lng: 35}}
-            icon={helmetIcon}
-            onClick={() => handleToggle()}
-        />
+        <>
+        { 
+            locations.map(location => {
+                location.map(event => {
+                    <Marker
+                        position={event.latlng}
+                        icon={helmetIcon}
+                        onClick={() => {
+                            setVideoData(event)
+                            handleToggle()
+                        }}
+                    />
+                })
+            })
+        }
+        </>
     );
 }
