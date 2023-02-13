@@ -8,22 +8,24 @@ export default function Markers({ handleToggle, setVideoData }) {
     }
 
     const markerData = require('./map-data/marker_data.json');
-    const locations = markerData.locations;
+    const markers = markerData.markers;
+
+    const onLoad = marker => {
+        console.log('marker: ', marker)
+      }
 
     return (
         <>
-        { 
-            locations.map(location => {
-                location.map(event => {
-                    <Marker
-                        position={event.latlng}
-                        icon={helmetIcon}
-                        onClick={() => {
-                            setVideoData(event)
-                            handleToggle()
-                        }}
-                    />
-                })
+        {
+            markers.forEach((marker, index) => {   
+                console.log("INDEX="+index);
+                console.log(marker.latlng);
+                <Marker
+                    key={index}
+                    onLoad={onLoad}
+                    position={marker.latlng}
+                    icon={helmetIcon}
+                />
             })
         }
         </>
