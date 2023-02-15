@@ -1,20 +1,20 @@
 import './App.css';
 import Map from './components/Map';
-import Video from './components/Video';
+import VideoAndInfo from './components/VideoAndInfo';
 import React, { useState } from 'react'
 
 function App() {
   const [toggle, setToggle] = useState(false);
-  const [videoData, setVideoData] = useState(null);
+  const [videoData, setVideoData] = useState([]);
 
   const handleToggle = () => {
-    setToggle(!toggle);
+    setToggle(true);
   };
 
   return (
     <div className="App">
       <Map handleToggle={handleToggle} setVideoData={setVideoData}  />
-      {toggle && <Video data={videoData} />}
+      {toggle && <VideoAndInfo data={videoData} />}
     </div>
   );
 }

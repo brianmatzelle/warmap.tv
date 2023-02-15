@@ -7,25 +7,23 @@ export default function Markers({ handleToggle, setVideoData }) {
         scaledSize: new window.google.maps.Size(112, 75),
     }
 
-    const markerData = require('./map-data/marker_data.json');
-    const markers = markerData.markers;
-
-    const onLoad = marker => {
-        console.log('marker: ', marker)
-      }
+    const markerData = require('./map-data/marker_data.json').markers;
 
     return (
         <>
         {
-            markers.forEach((marker, index) => {   
-                console.log("INDEX="+index);
-                console.log(marker.latlng);
-                <Marker
-                    key={index}
-                    onLoad={onLoad}
-                    position={marker.latlng}
-                    icon={helmetIcon}
-                />
+            markerData.map((marker, index) => {
+                return (
+                    <Marker
+                        key={index}
+                        position={marker.latlng}
+                        icon={helmetIcon}
+                        onClick={() => {
+                            handleToggle();
+                            setVideoData(marker);
+                        }}
+                    />
+                )
             })
         }
         </>
