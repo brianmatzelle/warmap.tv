@@ -24,9 +24,9 @@ export default function VideoAndInfo({ data }) {
         <iframe 
             width={data.width} 
             height={data.height} 
-            src={data.src} 
+            src={data.src}
             title={data.title} 
-            frameborder="0" 
+            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             allowfullscreen
             >
