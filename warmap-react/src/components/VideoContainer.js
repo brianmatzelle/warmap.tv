@@ -27,16 +27,18 @@ function VideoAndInfo({ data, executeScroll }, ref) {
     return (
     <div ref={ref} className="container">
         <iframe 
-            width={data.width} 
+            // width={data.width} 
+            width="70%"
             height={data.height} 
             src={data.src}
             title={data.title} 
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen
+            allowFullscreen="true"
             >
         </iframe>
-        <Info width={dimensions.width} height={data.height} />
+        {/* <Info width={dimensions.width} height={data.height} /> */}
+        <Info width="30%" height={data.height} />
     </div>
     );
 }
