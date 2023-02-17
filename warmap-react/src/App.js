@@ -1,6 +1,6 @@
 import './App.css';
 import Map from './components/Map';
-import VideoAndInfo from './components/VideoAndInfo';
+import VideoContainer from './components/VideoContainer';
 import React, { useState, useRef } from 'react'
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <Map height={mapHeight} handleToggle={handleToggle} setVideoData={setVideoData} />
-      {toggle && <VideoAndInfo ref={ref} data={videoData} executeScroll={executeScroll} />}
+      {toggle && <VideoContainer ref={ref} data={videoData} executeScroll={executeScroll} />}
     </div>
   );
 }

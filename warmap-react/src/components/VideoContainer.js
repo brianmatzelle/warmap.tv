@@ -1,6 +1,6 @@
 import React, { useState, useEffect, forwardRef } from "react";
 import Info from "./video-components/Info";
-import "./VideoAndInfo.css";
+import "./VideoContainer.css";
 
 function VideoAndInfo({ data, executeScroll }, ref) {
     // width = dimensions.width, height = dimensions.height
@@ -21,7 +21,7 @@ function VideoAndInfo({ data, executeScroll }, ref) {
 
     useEffect(() => {
         executeScroll();
-    }, []);
+    });
 
     
     return (
