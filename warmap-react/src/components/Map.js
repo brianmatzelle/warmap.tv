@@ -2,13 +2,7 @@ import React from 'react'
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 import RussianBorder from './map-components/RussianBorder';
 import Markers from './map-components/Markers';
-import './Map.css';
 import UkraineBorder from './map-components/UkraineBorder';
-
-const containerStyle = {
-  width: "100%",
-  height: '100%'
-};
 
 const center = {
     // ukraine center lat/lng
@@ -19,7 +13,12 @@ const center = {
 const mapId = process.env.REACT_APP_MAPS_ID;
 const apiKey = process.env.REACT_APP_MAPS_API_KEY;
 
-export default function Map({ handleToggle, setVideoData }) {
+export default function Map({ height, handleToggle, setVideoData }) {
+  const containerStyle = {
+    width: "100vw",
+    height: height
+  };
+
   const { isLoaded } = useJsApiLoader({
     id: mapId,
     googleMapsApiKey: apiKey,

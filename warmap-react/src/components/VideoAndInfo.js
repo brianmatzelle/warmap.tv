@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 import Info from "./video-components/Info";
 import "./VideoAndInfo.css";
 
-export default function VideoAndInfo({ data }) {
+function VideoAndInfo({ data, executeScroll }, ref) {
     // width = dimensions.width, height = dimensions.height
     const [dimensions, setDimensions] = useState({ 
         height: window.innerHeight,
@@ -19,8 +19,13 @@ export default function VideoAndInfo({ data }) {
         window.addEventListener('resize', handleResize)
     });
 
+    useEffect(() => {
+        executeScroll();
+    }, []);
+
+    
     return (
-    <div className="container">
+    <div ref={ref} className="container">
         <iframe 
             width={data.width} 
             height={data.height} 
@@ -35,3 +40,5 @@ export default function VideoAndInfo({ data }) {
     </div>
     );
 }
+
+export default forwardRef(VideoAndInfo);
