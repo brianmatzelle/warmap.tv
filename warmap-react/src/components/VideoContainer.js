@@ -3,6 +3,7 @@ import Info from "./video-components/Info";
 import "./VideoContainer.css";
 
 function VideoAndInfo({ data, executeScroll }, ref) {
+    /*
     // width = dimensions.width, height = dimensions.height
     const [dimensions, setDimensions] = useState({ 
         height: window.innerHeight,
@@ -18,6 +19,7 @@ function VideoAndInfo({ data, executeScroll }, ref) {
         }
         window.addEventListener('resize', handleResize)
     });
+    */
 
     useEffect(() => {
         executeScroll();
