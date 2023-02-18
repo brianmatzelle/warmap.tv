@@ -1,6 +1,7 @@
 import React, { useState, useEffect, forwardRef } from "react";
 import Info from "./video-components/Info";
 import "./VideoContainer.css";
+import SplitterLayout from "react-splitter-layout";
 
 function VideoAndInfo({ data, executeScroll }, ref) {
     /*
@@ -25,22 +26,36 @@ function VideoAndInfo({ data, executeScroll }, ref) {
         executeScroll();
     });
 
+    const [dragging, setDragging] = useState(false);
+    const handleDragStart = () => {
+        setDragging(true);
+    };
+    const handleDragEnd = () => {
+        setDragging(false);
+    };
     
     return (
     <div ref={ref} className="container">
-        <iframe 
-            // width={data.width} 
-            width="70%"
-            height={data.height} 
-            src={data.src}
-            title={data.title} 
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowFullscreen="true"
-            >
-        </iframe>
-        {/* <Info width={dimensions.width} height={data.height} /> */}
-        <Info width="30%" height={data.height} />
+        <SplitterLayout className="splitter" onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
+            <div>
+                <iframe 
+                    // width={data.width} 
+                    width="50%"
+                    height={data.height} 
+                    src={data.src}
+                    title={data.title} 
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowFullscreen="true"
+                    >
+                </iframe>
+            </div>
+
+            <div>
+                {dragging}
+                <Info data={data}/>
+            </div>
+        </SplitterLayout>
     </div>
     );
 }

@@ -3,7 +3,8 @@
     [
         {
             "src": "https://rumble.com/embed/v273660/?pub=1swrca",
-            "about": "https://en.wikipedia.org/wiki/2023_Dnipro_residential_building_airstrike",
+            "wiki": "https://en.wikipedia.org/wiki/2023_Dnipro_residential_building_airstrike",
+            "embed": "https://www.nbcnews.com/news/world/death-toll-rises-russian-strike-dnipro-ukraine-building-rcna65929",
             "title": "Wikipedia: Dnipro residential buidling airstrike",
             "latlng":
             {
@@ -15,7 +16,8 @@
         },
         {
             "src": "https://rumble.com/embed/v26tbd8/?pub=1swrca",
-            "about": "https://www.reddit.com/r/CombatFootage/comments/yqz3hv/nucking_futs_turret_pov_antitank_mine_blast/",
+            "wiki": "",
+            "embed": "https://www.reddit.com/r/CombatFootage/comments/yqz3hv/nucking_futs_turret_pov_antitank_mine_blast/",
             "title": "Nucking Futs Turret POV, antitank mine blast, Ukraine.",
             "latlng": 
             { 

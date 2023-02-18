@@ -1,3 +1,4 @@
+import React from "react";
 import { Polyline } from "@react-google-maps/api";
 
 export default function UkraineBorder() {

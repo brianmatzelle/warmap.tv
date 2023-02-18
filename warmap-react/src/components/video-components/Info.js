@@ -1,12 +1,12 @@
 import React from "react";
 import Deck from "./Deck";
 
-export default function Info({ width, height }) {
+export default function Info({ data, width, height }) {
     return(
         <div 
         style={{ 
-            width: width, 
-            height: height, 
+            width: "50vw", 
+            height: data.height, 
             backgroundColor: 'red', 
             display: 'flex', 
             flexDirection: 'column', 
@@ -15,7 +15,7 @@ export default function Info({ width, height }) {
         }} 
         className="info"
         >
-            <Deck />
+            <iframe title={data.title} src={data.embed} width="100%" height="100%"></iframe>
         </div>
 
     );

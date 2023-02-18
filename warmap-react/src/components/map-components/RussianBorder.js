@@ -1,3 +1,4 @@
+import React from "react";
 import { Polygon } from "@react-google-maps/api";
 
 export default function RussianBorder() {
